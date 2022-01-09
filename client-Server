@@ -1,0 +1,105 @@
+
+HTTP  = HyperText Transfer Protocol
+
+
+
+Cliente  <--- HTTP ---> Servidor Java  <--- SQL ---> Banco de dados
+
+
+HTTP- não é segura pois trafega dados poros, visiveis a qualquer um
+
+HTTPS - é segura pois trafega dados criptografados, do cliente até o servidor, ai o servidor tem a chave para descriptografar os dados!
+
+
+no cmd passo o comando nslookup google.com, ele me devolve o Adrress do site 216.239.38.120, jogando na barra de pesquisa e dando enter ele vai entrar no site
+quando pesquisamos google, ele vem como um endereço de IP, mais quando passa pelo DNS, o DNS ve se conhece esse ip, se conhecer,
+ele devolve com o nome que esta registrado na quele IP
+
+   https://    alura.com.br  :443     curso/html-css
+   Protocolo   Dominio       Porta    Recurso
+
+Qual das informações abaixo é verdadeira?
+
+  - Uma requisição sempre deve ser enviada com todas as informações necessárias, o que faz uma requisição ser sempre independente das demais.
+
+   O que é uma sessão HTTP?
+
+  - É o tempo que o cliente utiliza um web app.
+
+   Qual dessas alternativas é verdadeira?
+
+   Uma comunicação com HTTP sempre é iniciada pelo cliente que manda uma requisição ao servidor esperando por uma resposta.
+
+
+          STATUS CODE
+
+200 a 299 - Sucesso
+300 a 399 - redirecionamento da requisição 
+400 a 499 - erro na requisição do lado do cliente
+500 a 599 - erro com a resposta do lado do servidor
+       
+
+
+         Requisições
+
+GET- receber dados (e caminho aparece na URL)
+POST-Submeter dados (parametros vai pelo corpo da requisição)
+DELET- Remover um recurso
+PUT-Atualiza em recurso(status) esta blok, manda o put e muda o estado para unlook
+          
+
+
+        formatos que podem vir como retorno
+
+XML- é igual html tamben é uma linguagen de marcação de texto
+JSON- é um formato de anotação em javascript, é bem usado em mobile
+
+
+  De que forma podemos especificar o formato que esperamos que seja devolvido?
+
+  Accept: text/html, Accept: text/css, Accept: application/xml, Accept: application/json, Accept:image/jpeg e Accept: image/*
+
+                            
+                                REST
+                                recurso
+                                (URI)
+
+                                HTTP           
+                     
+                                                   representação                           
+       OPERAÇÕES                                  (JESON/XML/HTML)
+  (get/post/put/delete)                
+
+
+  Em alguns cabeçalhos do HTTP devemos especificar algum formato. Os formatos são chamados na documentação de MIME types. E na definição do cabeçalho usamos a seguinte estrutura: tipo/subtipo. São tipos conhecidos:
+
+  text, image, application, audio e video
+
+  E alguns subtipos:
+
+  text -> text/plain, text/html, text/css, text/javascript
+  image -> image/gif, image/png, image/jpeg
+  audio -> audio/midi, audio/mpeg, audio/webm, audio/ogg, audio/wav
+  video -> video/mp4
+  application -> application/xml,  application/pdf
+
+
+                            NA VESÃO HTTP/2 
+
+                          HEADESRS(CABESALHO)
+Agora é conprimido atraver do algoritimo GZIP, para ficar mais leve o trafego das informações, depois é usado o HPACH que comprime ainda mais 
+o conteudo binario, justamente pra tornar uma requisição algo leve!
+
+O HTTP/2 Agora não envia mais os textos puros, ele agora envia em binario, já sai do navegador en binario!
+
+E alen disto a resposta tamben vem em binario!
+
+Na verção 2 ainda tem tbm o TLS por padrão, que criptografa as informasões, alen de elas já seren binarias, comprimidar,
+tbm são criptografa pelo TLS!
+
+
+
+    Com o crescimento do número de dispositivos móveis conectados a Web, é cada vez mais importante que a quantidade de dados trafegada seja a menor possível, afinal este tipo de dispositivo não costuma ter uma conexão com muita banda larga. O protocolo HTTP/2 traz diversas tecnologias para diminuir o tamanho das requisições.
+
+
+    Por padrão, no protocolo HTTP versão 1.1 não é necessário o uso da camada de segurança TSL/SSL. Como hoje em dia trafegamos muitos dados críticos na Web, como senhas, logins e dados bancários, um protocolo atualizado que faz uso dessa segurança parece quase uma necessidade.
